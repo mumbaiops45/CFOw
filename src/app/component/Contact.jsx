@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="container">
         <div className="row g-4">
           
-          {/* Contact Info */}
+          
           <div className="col-lg-6">
             <div className="contact-card shadow-lg p-4">
               <h2 className="contact-heading mb-3">Let’s Talk</h2>
