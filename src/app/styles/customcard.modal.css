@@ -1,0 +1,177 @@
+
+
+.voice-section {
+  padding: 20px 20px;
+  background: #f9fafc;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #023E60; 
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #3ab415; 
+  left: 20%;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+/* ===== CARD GRID ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  border-radius: 16px;
+  background: #ffffff; 
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #023E60;
+  letter-spacing: 0.3px;
+}
+
+.card-text {
+  font-size: 1.05rem;
+  color: #475569; 
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.card-subtitle {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.card-body,
+.card-title,
+.card-text,
+.card-subtitle {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover .card-body {
+  transform: translateY(-4px);
+}
+
+.card:hover .card-title {
+  transform: translateX(3px);
+}
+
+.card:hover .card-text {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.card:hover .card-subtitle {
+  transform: translateX(2px);
+}
+
+/* ===== ANIMATIONS ===== */
+.card-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animated-card {
+  animation-duration: 0.6s;
+}
+
+.slide-in-left {
+  animation-name: slideLeft;
+}
+
+.slide-in-right {
+  animation-name: slideRight;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}

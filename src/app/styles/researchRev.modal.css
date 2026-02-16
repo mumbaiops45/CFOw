@@ -1,0 +1,145 @@
+
+
+
+
+.research-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 4%;
+  gap: 50px;
+  background-color: #f9fafc;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.research-content {
+  flex: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+  text-align: left; 
+}
+
+.research-content h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #023E60;
+  line-height: 1.2;
+}
+
+.research-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #475569;
+  font-weight: 400;
+}
+
+.research-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(60px);
+  animation: slideIn 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.research-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.research-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 992px) {
+  .research-container {
+    flex-direction: column;
+    text-align: left; 
+    padding: 60px 8%;
+    gap: 35px;
+  }
+
+  .research-content {
+    text-align: left;
+  }
+
+  .research-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .research-content p {
+    font-size: 1.05rem;
+  }
+
+  .research-image img {
+    max-width: 400px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .research-container {
+    text-align: left; 
+  }
+
+  .research-content {
+    text-align: left;
+  }
+
+  .research-content h1 {
+    font-size: 2rem;
+  }
+
+  .research-content p {
+    font-size: 1rem;
+  }
+
+  .research-image img {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .research-container {
+    padding: 40px 5%;
+    gap: 25px;
+    text-align: left; 
+  }
+
+  .research-content {
+    text-align: left;
+  }
+
+  .research-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .research-content p {
+    font-size: 0.95rem;
+  }
+}

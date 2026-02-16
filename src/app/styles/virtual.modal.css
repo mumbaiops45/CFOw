@@ -1,0 +1,179 @@
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body, h1, h2, h3, h4, h5, h6, p, span {
+  font-family: 'Poppins', sans-serif;
+}
+
+.virtual-cfo-section {
+  /* padding: 60px 10%; */
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.virtual-cfo-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.virtual-image-wrapper {
+  flex: 1;
+}
+
+.virtual-image {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+.virtual-image:hover {
+  transform: scale(1.05);
+}
+
+.virtual-content {
+  flex: 2;
+}
+
+.virtual-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #023E60;
+  margin-bottom: 25px;
+}
+
+.service-highlights {
+  margin-bottom: 20px;
+}
+
+.highlight {
+  display: inline-block;
+  color: #54ae4a;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.05);
+}
+
+.virtual-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 20px;
+  text-align: left; 
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 1200px) {
+  .virtual-cfo-container {
+    gap: 40px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .virtual-cfo-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+  }
+
+ 
+  .virtual-image-wrapper {
+    order: 2;
+  }
+
+  .virtual-content {
+    order: 1;
+  }
+
+  .virtual-image {
+    max-width: 400px;
+    width: 100%; 
+  }
+
+  .virtual-title {
+    font-size: 2rem;
+  }
+
+  .highlight {
+    font-size: 1.8rem;
+  }
+
+  .virtual-description {
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .virtual-cfo-section {
+    padding: 40px 5%;
+  }
+
+  .virtual-image {
+    max-width: 100%; 
+  }
+
+  .virtual-title {
+    font-size: 1.8rem;
+  }
+
+  .highlight {
+    font-size: 1.6rem;
+  }
+
+  .virtual-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .virtual-cfo-section {
+    padding: 30px 3%;
+  }
+
+  .virtual-image {
+    max-width: 100%; 
+  }
+
+  .virtual-title {
+    font-size: 1.5rem;
+  }
+
+  .highlight {
+    font-size: 1.4rem;
+  }
+
+  .virtual-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left; 
+  }
+}
