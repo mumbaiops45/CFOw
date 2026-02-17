@@ -1,10 +1,37 @@
+'use client';
 
-
-import React from "react";
+import React, { useState } from "react";
 import "../styles/contact.modal.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { number } from "framer-motion";
 
 const Contact = () => {
+  const[formd, setformd] = useState({
+    name: "",
+    number: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) =>{
+    const {name, value} = e.target;
+    setformd((prev) =>({
+      ...prev,
+      [name]: value
+    }));
+
+  };
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log("Submit Data", formd);
+    setformd({
+      name: "",
+      email: "",
+      number: "",
+      message: ""
+    })
+  }
   return (
     <section className="contact-wrapper py-5">
       <div className="container">
@@ -47,7 +74,6 @@ const Contact = () => {
                   </h6>
                 </div>
               </a>
-
               <div className="contact-item">
                 <FaClock className="contact-icon" />
                 <div>
@@ -58,23 +84,21 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          {/* Contact Form */}
           <div className="col-lg-6">
             <div className="contact-form-card shadow-lg p-4">
               <h4 className="fw-bold mb-4">Send Us a Message</h4>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <input type="text" className="form-control" placeholder="Your Name" required />
+                  <input type="text" className="form-control" name="name" placeholder="Your Name" onChange={handleChange} value={formd.name} required />
                 </div>
                 <div className="mb-3">
-                  <input type="tel" className="form-control" placeholder="Phone Number" required />
+                  <input type="tel" className="form-control" name="number" placeholder="Phone Number" onChange={handleChange} value={formd.number} required />
                 </div>
                 <div className="mb-3">
-                  <input type="email" className="form-control" placeholder="Email" required />
+                  <input type="email" className="form-control" name="email" placeholder="Email" onChange={handleChange} value={formd.email}  required />
                 </div>
                 <div className="mb-3">
-                  <textarea className="form-control" rows="4" placeholder="Message" required></textarea>
+                  <textarea className="form-control" rows="4" name="message" placeholder="Message" onChange={handleChange} value={formd.message} required></textarea>
                 </div>
                 <button type="submit" className="btn-submit w-100">Submit</button>
               </form>
