@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import "../styles/contact.modal.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
-import { number } from "framer-motion";
+
 
 const Contact = () => {
   const[formd, setformd] = useState({

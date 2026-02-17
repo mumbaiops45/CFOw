@@ -7,8 +7,6 @@ import Clients from "../component/Clients";
 export default function page() {
     return (
         <div className="about-container mt-5">
-
-
             <section className="about-hero fade-in">
                 <h1>About Radiant Services Company</h1>
                 <p>
@@ -17,8 +15,8 @@ export default function page() {
                 </p>
             </section>
 
-            {/* Who We Are */}
-            <section className="about-section container slide-up">
+
+            <section className="about-section  slide-up">
                 <h2>Who We Are</h2>
                 <p>
                     Radiant Services Company is a premier financial consultancy and
@@ -32,7 +30,7 @@ export default function page() {
             </section>
 
 
-            <section className="about-section container slide-up delay-1">
+            <section className="about-section slide-up delay-1">
                 <h2>Our Approach</h2>
                 <div className="approach-grid mb-4">
                     <div className="approach-card">Understand</div>
@@ -43,7 +41,7 @@ export default function page() {
             </section>
 
 
-            <section className="about-grid container slide-up delay-2">
+            {/* <section className="about-grid  slide-up delay-2">
                 <div className="about-card">
                     <h3>Our Mission</h3>
                     <p>
@@ -59,10 +57,32 @@ export default function page() {
                         advisory firm.
                     </p>
                 </div>
+            </section> */}
+
+            <section className="about-section slide-up delay-2">
+                <div className="about-grid-container">
+                    <div className="about-grid">
+                        <div className="about-card">
+                            <h3>Our Mission</h3>
+                            <p>
+                                Deliver transparent, growth-focused financial solutions
+                                that empower businesses to scale confidently.
+                            </p>
+                        </div>
+
+                        <div className="about-card">
+                            <h3>Our Vision</h3>
+                            <p>
+                                To become India’s most trusted Virtual CFO and financial
+                                advisory firm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 
-            <section className="about-section container slide-up delay-3">
+            <section className="about-section  slide-up delay-3">
                 <h2>Why Businesses Trust Radiant</h2>
                 <div className="why-grid">
                     <div className="why-item">10+ Years Experience</div>
@@ -94,8 +114,6 @@ export default function page() {
                     Book Consultation
                 </button>
             </section>
-
-
         </div>
     );
 }
