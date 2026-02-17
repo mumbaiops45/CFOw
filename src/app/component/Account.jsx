@@ -29,6 +29,8 @@ const Account = () => {
           <img 
             src="financial.jpg" 
             alt="Financial Strategy" 
+            loading="lazy"
+            priority={false} 
           />
         </div>
       </div>

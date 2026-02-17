@@ -28,7 +28,7 @@
   border-radius: 2px;
 }
 
-/* ===== CARD GRID ===== */
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -116,7 +116,7 @@
   transform: translateX(2px);
 }
 
-/* ===== ANIMATIONS ===== */
+
 .card-hidden {
   opacity: 0;
   transform: translateY(30px);

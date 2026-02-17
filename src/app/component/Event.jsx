@@ -62,12 +62,12 @@ const Event = () => {
             }}
         >
 
-            <div className="text-center mb-5">
+            {/* <div className="text-center mb-5">
                 <p className="text-white fw-medium fs-5 text-center mt-2">
                     Check out the latest events happening now!
                 </p>
 
-            </div>
+            </div> */}
             <div className="row">
                 {eventsData.map((event, index) => (
                     <EventCard key={index} {...event} index={index} />

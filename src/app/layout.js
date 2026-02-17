@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
-// import MyNavbar from '@/components/Navbar';
 import MyNavbar from './component/Navbar';
 import Footer from './component/Footer';
 

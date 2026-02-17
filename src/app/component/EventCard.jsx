@@ -1,25 +1,5 @@
 
-
-// import React from "react";
-
-// const EventCard = ({ image, title, description, updated }) => {
-//   return (
-//     <div className="col-12 col-md-6 col-lg-4 mb-4">
-//       <div className="card h-100 shadow-sm event-card">
-//         <div className="card-hover-wrapper">
-//           <img src={image} className="card-img-top event-img" alt={title} />
-//           <div className="card-text-overlay">
-//             <h5 className="card-title">{title}</h5>
-//             <p className="card-text">{description}</p>
-//             {updated && <small className="text-muted">{updated}</small>}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EventCard;
+"use client";
 
 import React, { useEffect, useRef, useState } from "react";
 
@@ -60,7 +40,7 @@ const EventCard = ({ image, title, description, updated, index }) => {
     >
       <div className="card h-100 shadow-sm event-card">
         <div className="card-hover-wrapper">
-          <img src={image} className="card-img-top event-img" alt={title} />
+          <img src={image} className="card-img-top event-img" alt={title} loading="eager" />
           <div className="card-text-overlay">
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{description}</p>

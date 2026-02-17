@@ -24,7 +24,6 @@ export default function Home() {
       <section id="event"><Event /></section>
       <section id="task"><Task /></section>
       <section id="contact"><Contact /></section>
-      <Account/>
     </div>
   );
 }

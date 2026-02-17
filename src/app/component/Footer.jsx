@@ -32,7 +32,6 @@ const Footer = () => {
       <div className="container">
         <div className="row gy-4 text-start text-light">
 
-          {/* Logo & About */}
           <div className="col footer-column">
             <img
               src="https://easylyve.s3.ap-south-1.amazonaws.com/logos/61YMOvbNuVL.jpg"
@@ -46,7 +45,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
+          
           <FooterColumn title="Our Services">
             <ul className="list-unstyled">
               {services.map((service, index) => (
@@ -55,7 +54,7 @@ const Footer = () => {
             </ul>
           </FooterColumn>
 
-          {/* Locations */}
+          
           <FooterColumn title="We Are Active In">
             <ul className="list-unstyled">
               {locations.map((location, index) => (
@@ -64,7 +63,7 @@ const Footer = () => {
             </ul>
           </FooterColumn>
 
-          {/* Blogs */}
+          
           <FooterColumn title="Recent Blogs">
             <ul className="list-unstyled">
               {blogs.map((blog, index) => (
@@ -73,7 +72,6 @@ const Footer = () => {
             </ul>
           </FooterColumn>
 
-          {/* Contact */}
           <FooterColumn title="Contact">
             <p className="footer-text mb-1">427. A-Wing Phoenix House,</p>
             <p className="footer-text mb-1">Lower Parel West, Mumbai</p>

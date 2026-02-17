@@ -15,7 +15,6 @@ export default function page() {
                 </p>
             </section>
 
-
             <section className="about-section  slide-up">
                 <h2>Who We Are</h2>
                 <p>
@@ -29,7 +28,6 @@ export default function page() {
                 </p>
             </section>
 
-
             <section className="about-section slide-up delay-1">
                 <h2>Our Approach</h2>
                 <div className="approach-grid mb-4">
@@ -39,26 +37,6 @@ export default function page() {
                     <div className="approach-card">Optimize</div>
                 </div>
             </section>
-
-
-            {/* <section className="about-grid  slide-up delay-2">
-                <div className="about-card">
-                    <h3>Our Mission</h3>
-                    <p>
-                        Deliver transparent, growth-focused financial solutions
-                        that empower businesses to scale confidently.
-                    </p>
-                </div>
-
-                <div className="about-card">
-                    <h3>Our Vision</h3>
-                    <p>
-                        To become India’s most trusted Virtual CFO and financial
-                        advisory firm.
-                    </p>
-                </div>
-            </section> */}
-
             <section className="about-section slide-up delay-2">
                 <div className="about-grid-container">
                     <div className="about-grid">

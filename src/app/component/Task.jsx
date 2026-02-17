@@ -54,7 +54,6 @@ export default function Task() {
       </div>
 
       <div className="row">
-        {/* FAQ List */}
         <div className="col-lg-7">
           {Question.map((faq, index) => (
             <FAQItem

@@ -21,7 +21,6 @@ const Body = () => {
             legal drafting, virtual CFO, strategic planning, statutory compliances. We help businesses
             transform insights into action and ensure financial growth with precision and reliability.
           </p>
-
           
           <div className="row  hero-btn-grid">
             <div className="col-6">
