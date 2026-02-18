@@ -5,20 +5,21 @@
   background: linear-gradient(135deg, #0b1f3a 0%, #1f3b5a 100%);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
+  will-change: transform, opacity; 
+  backface-visibility: hidden; 
 }
-
 
 .contact-card {
   background-color: #1f3b5a;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform; 
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) translateZ(0);
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
-
 
 .contact-heading {
   font-size: 1.8rem;
@@ -39,14 +40,14 @@
   margin: 0;
 }
 
-
 .contact-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
   text-decoration: none;
   color: #ffffff;
-  transition: color 0.3s;
+  transition: color 0.3s ease, transform 0.3s ease;
+  will-change: color, transform;
 }
 
 .contact-item:hover {
@@ -58,14 +59,16 @@
   margin-right: 15px;
   flex-shrink: 0;
   margin-top: 3px;
+  transform: translateZ(0); 
 }
-
 
 .contact-form-card {
   background-color: #ffffff;
   color: #0b1f3a;
   border-radius: 12px;
   font-family: 'Poppins', sans-serif;
+  will-change: transform, opacity; 
+  backface-visibility: hidden;
 }
 
 .contact-form-card .form-control {
@@ -81,7 +84,6 @@
   box-shadow: 0 0 0 0.2rem rgba(58, 180, 53, 0.25);
 }
 
-
 .btn-submit {
   background-color: #3ab415;
   color: #ffffff;
@@ -91,13 +93,13 @@
   border: none;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  will-change: transform, background;
 }
 
 .btn-submit:hover {
   background-color: #2d8c11;
-  transform: scale(1.05);
+  transform: scale(1.05) translateZ(0); 
 }
-
 
 @media (max-width: 992px) {
   .contact-wrapper {

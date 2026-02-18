@@ -1,11 +1,13 @@
 
+html {
+  scroll-behavior: smooth;
+}
 
 .about-container {
   font-family: "Poppins", sans-serif;
   color: #1e293b;
   overflow-x: hidden;
 }
-
 
 .about-hero {
   background: linear-gradient(-45deg, #0f172a, #1e3a8a, #1e40af, #0f172a);
@@ -26,14 +28,6 @@
   margin-top: 15px;
   opacity: 0.9;
 }
-
-
-.about-section {
-  padding: 120px 20px;
-  position: relative;
-  background: linear-gradient(135deg, #f9fafb, #eef2f7);
-}
-
 
 .about-section::before {
   content: "";
@@ -60,15 +54,6 @@
 }
 
 
-.about-section h2 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-bottom: 35px;
-  color: #0f172a;
-  position: relative;
-}
-
-
 .about-section h2::after {
   content: "";
   display: block;
@@ -80,13 +65,7 @@
 }
 
 
-.about-section p {
-  font-size: 1.18rem;
-  line-height: 1.9;
-  color: #475569;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
+
 
 
 .about-section p:last-child {
@@ -98,14 +77,8 @@
 .about-section {
   padding: 50px 20px;
   position: relative;
-}
+   background: linear-gradient(180deg, #f8fafc, #eef2ff);
 
-/* .about-section:nth-child(even) {
-  background: linear-gradient(180deg, #f8fafc, #eef2ff);
-} */
-
-.about-section {
-  background: linear-gradient(180deg, #f8fafc, #eef2ff);
 }
 
 .about-section h2 {

@@ -4,8 +4,9 @@
   font-family: 'Poppins', sans-serif;
   padding: 50px 20px;
   background: #f9fafc;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
-
 
 .faq-title {
   font-size: 2.7rem;
@@ -29,7 +30,6 @@
   border-radius: 2px;
 }
 
-
 .faq-item {
   background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
   border-radius: 10px;
@@ -37,16 +37,17 @@
   overflow: hidden;
   transform: translateX(-50px);
   opacity: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+  will-change: transform, opacity;
 }
 
 .faq-item.visible {
-  animation: slideInFromLeft 0.6s forwards;
-  animation-delay: var(--delay);
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .faq-item:hover {
-  transform: translateY(-2px) scale(1.01);
+  transform: translateY(-2px) scale(1.01) translateZ(0);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
@@ -55,6 +56,8 @@
   color: white;
   padding: 1rem 1.25rem;
   cursor: pointer;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .faq-question {
@@ -68,6 +71,7 @@
 .faq-toggle-icon {
   transition: transform 0.3s ease;
   font-size: 1.5rem;
+  will-change: transform;
 }
 
 .faq-toggle-icon.open {
@@ -78,18 +82,18 @@
   max-height: 0;
   overflow: hidden;
   padding: 0 1.25rem;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition: max-height 0.35s ease, padding 0.35s ease;
   background-color: #f8f9fb;
   color: #334e68;
   font-size: 1rem;
   line-height: 1.7;
+  will-change: max-height, padding;
 }
 
 .faq-answer.open {
   max-height: 300px;
   padding: 1rem 1.25rem;
 }
-
 
 .sidebar-card {
   background-color: #f0f4f8;
@@ -132,7 +136,6 @@
   font-size: 1.2rem;
 }
 
-
 .btn-book {
   background-color: #3ab415;
   color: white;
@@ -142,25 +145,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  will-change: transform, background;
 }
 
 .btn-book:hover {
   background-color: #2d8c11;
-  transform: scale(1.05);
+  transform: scale(1.05) translateZ(0);
 }
-
-
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 
 @media (max-width: 992px) {
   .faq-section {
