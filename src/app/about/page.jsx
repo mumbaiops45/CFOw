@@ -167,43 +167,7 @@ export default function page() {
                     Book Consultation
                 </button>
             </section>
-            {/* <section className="about-team slide-up delay-4">
-                <h2>Meet Our Experts</h2>
-                <div className="team-grid">
-                    <div className="team-card">
-                        <img src="team1.jpg" alt="John Doe" />
-                        <h3>John Doe</h3>
-                        <p>Chief Financial Officer</p>
-                    </div>
-                    <div className="team-card">
-                        <img src="team2.jpg" alt="Jane Smith" />
-                        <h3>Jane Smith</h3>
-                        <p>Senior Chartered Accountant</p>
-                    </div>
-                    <div className="team-card">
-                        <img src="team3.jpg" alt="Robert Lee" />
-                        <h3>Robert Lee</h3>
-                        <p>Virtual CFO Expert</p>
-                    </div>
-                </div>
-
-                <h2 style={{ marginTop: "60px" }}>What Our Clients Say</h2>
-                <div className="testimonial-grid">
-                    <div className="testimonial-card">
-                        <p>"Radiant Services transformed our financial strategy, enabling scalable growth!"</p>
-                        <span>- Priya Sharma, CEO of Radiant Services Company</span>
-                    </div>
-                    <div className="testimonial-card">
-                        <p>"Expert guidance and highly professional team. Highly recommend!"</p>
-                        <span>- Rajesh Kumar, Founder of Radiant Services Company</span>
-                    </div>
-                    <div className="testimonial-card">
-                        <p>"Their Virtual CFO services streamlined our operations and finances efficiently."</p>
-                        <span>- Sneha Mehta, CFO of LMN Enterprises</span>
-
-                    </div>
-                </div>
-            </section> */}
+           
 
         </div>
     );
