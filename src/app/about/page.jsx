@@ -9,19 +9,22 @@ import {
     FileTextOutlined,
     TrophyOutlined
 } from "@ant-design/icons";
+import { FaBullseye, FaEye } from "react-icons/fa";
 
 
 export default function page() {
     return (
         <div className="about-container mt-5">
             <section className="about-hero fade-in">
-                <h1>About Radiant Services Company</h1>
-                <p>
-                    Trusted Chartered Accountants & Virtual CFO Experts Delivering
-                    Strategic Financial Leadership Across India
-                </p>
+                <div className="lines-bg"></div>
+                <div className="hero-content">
+                    <h1>About Radiant Services Company</h1>
+                    <p>
+                        Trusted Chartered Accountants & Virtual CFO Experts Delivering
+                        Strategic Financial Leadership Across India
+                    </p>
+                </div>
             </section>
-
             <section className="about-section slide-up">
                 <div className="about-content">
                     <div className="text">
@@ -31,20 +34,20 @@ export default function page() {
                             Chartered Accountant firm dedicated to helping businesses achieve
                             financial clarity, compliance excellence, and sustainable growth.
                         </p>
-                        <p>
+                        <p >
                             With 10+ years of experience and 150+ finance professionals,
                             we transform financial data into strategic decisions.
                         </p>
                         <div className="approach-grid">
                             <div className="approach-item">
-                                <div className="approach-card">Understand</div>
+                                <div className=" mb-1 arrow-shape-btn">Understand</div>
                                 <div className="approach-icon">
                                     <SearchOutlined />
                                 </div>
                             </div>
 
                             <div className="approach-item">
-                                <div className="approach-card ">Strategize</div>
+                                <div className="mb-1 arrow-shape-btn ">Strategize</div>
                                 <div
                                     className="approach-icon"
                                     style={{ color: "yellow" }}
@@ -54,7 +57,7 @@ export default function page() {
                             </div>
 
                             <div className="approach-item">
-                                <div className="approach-card">Execute</div>
+                                <div className="mb-1 arrow-shape-btn">Execute</div>
                                 <div className="approach-icon">
                                     <SettingOutlined />
                                 </div>
@@ -66,18 +69,23 @@ export default function page() {
                     </div>
                 </div>
             </section>
-
-            <section className="about-section slide-up delay-2">
+            <section className="about-section1 slide-up delay-2">
                 <div className="about-grid-container">
                     <div className="about-grid">
-                        <div className="about-card">
+                        <div className="about-card premium-card">
+                            <div className="icon-wrapper">
+                                <FaBullseye size={50} />
+                            </div>
                             <h3>Our Mission</h3>
                             <p>
                                 Deliver transparent, growth-focused financial solutions
                                 that empower businesses to scale confidently.
                             </p>
                         </div>
-                        <div className="about-card">
+                        <div className="about-card premium-card">
+                            <div className="icon-wrapper">
+                                <FaEye size={50} />
+                            </div>
                             <h3>Our Vision</h3>
                             <p>
                                 To become India’s most trusted Virtual CFO and financial
@@ -110,15 +118,15 @@ export default function page() {
             </section>
 
             <section className="about-stats">
-                <h2 style={{
-                    marginBottom: "40px",
+                <h2 className="clientss" style={{
+                    padding: "15px",
                     fontWeight: "500"
                 }}>Our Impact</h2>
                 <div className="clients-wrapper" style={{ marginTop: "80px" }}>
                     <Clients />
                 </div>
             </section>
-<section className="about-team slide-up delay-4">
+            <section className="about-team slide-up delay-4">
                 <h2>Meet Our Experts</h2>
                 <div className="team-grid">
                     <div className="team-card">
@@ -137,8 +145,7 @@ export default function page() {
                         <p>Virtual CFO Expert</p>
                     </div>
                 </div>
-
-                <h2 style={{ marginTop: "60px" }}>What Our Clients Say</h2>
+                <h2 style={{ marginTop: "40px" }}>What Our Clients Say</h2>
                 <div className="testimonial-grid">
                     <div className="testimonial-card">
                         <p>"Radiant Services transformed our financial strategy, enabling scalable growth!"</p>
@@ -151,7 +158,6 @@ export default function page() {
                     <div className="testimonial-card">
                         <p>"Their Virtual CFO services streamlined our operations and finances efficiently."</p>
                         <span>- Sneha Mehta, CFO of LMN Enterprises</span>
-
                     </div>
                 </div>
             </section>
@@ -167,8 +173,7 @@ export default function page() {
                     Book Consultation
                 </button>
             </section>
-           
-
         </div>
     );
 }
+

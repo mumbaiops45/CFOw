@@ -44,7 +44,7 @@ const [hasAnimated, setHasAnimated] = useState(false);
         {title && <h5 className="card-title">{title}</h5>}
         <p className="card-text">{text}</p>
         {name && (
-          <h6 className="card-subtitle text-body-secondary">{name}</h6>
+          <h6 className="card-subtitle ">{name}</h6>
         )}
       </div>
     </div>

@@ -1,13 +1,15 @@
 
+
 .research-container {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   padding: 50px 4%;
   gap: 50px;
   background-color: #f9fafc;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Popins', sans-serif;
 }
 
 
