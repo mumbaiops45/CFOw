@@ -425,6 +425,7 @@ html {
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
+    margin-left: 15px;
     text-align: center;
   }
   .approach-card {
@@ -434,6 +435,8 @@ html {
 
   .text p{
     padding: 0px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   
