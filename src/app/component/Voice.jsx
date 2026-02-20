@@ -1,130 +1,73 @@
-// "use client";
-// import React from "react";
-// import CustomCard from "./CustomCard";
-// import "../styles/customcard.modal.css";
 
-// const Voice = () => {
-//   const cards = [
-//     {
-//       name: "Saheb Narang",
-//       text:
-//         "Radiant Company Services offers more than just accounting—they truly understand business. Their insights into financial planning and compliance have saved us time and money.",
-//     },
-//     {
-//       name: "Shivam Singh",
-//       text:
-//         "Their team made the entire compliance process stress-free. From legal drafting to GST filings, they were fast and accurate.",
-//     },
-//     {
-//       name: "Kanika",
-//       text:
-//         "Radiant Company Services has been a game-changer for our business. Their Virtual CFO support helped us make smarter decisions.",
-//     },
-//     {
-//       name: "Rahul Verma",
-//       text:
-//         "Professional, reliable, and very knowledgeable. Their advisory support helped us scale confidently.",
-//     },
-//   ];
+'use client';
 
-//   return (
-//     <section className="voice-section">
-//       <div className="text-center mb-1">
-//         <h2 className="section-title">Voice of Customer</h2>
-//       </div>
-
-//       <div className="card-grid">
-//         {cards.map((card, index) => (
-//           <CustomCard
-//             key={index}
-//             name={card.name}
-//             text={card.text}
-//             index={index}
-//           />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Voice;
-
-
-"use client";
-
-import React from "react";
+import React, { useState } from "react";
 import CustomCard from "./CustomCard";
 import "../styles/customcard.modal.css";
 
 const Voice = () => {
-
   const cards = [
     {
       name: "Saheb Narang",
       role: "Business Owner",
-      text:
-        "Radiant Company Services offers more than just accounting — they truly understand business. Their insights saved us time and money.",
+      text: "Radiant Company Services offers more than just accounting — they truly understand business.",
+      extraText: "They also provided detailed growth strategies that increased revenue by 25%.",
+      image: "https://t3.ftcdn.net/jpg/05/17/96/20/360_F_517962042_PssY3rZpOEpC9LN0kiF3t5m3vdn18LXd.jpg",
+      rating: 5,
     },
     {
       name: "Shivam Singh",
       role: "Startup Founder",
-      text:
-        "Their team made compliance stress-free. From GST to legal drafting, everything was fast, accurate, and professional.",
+      text: "Their team made compliance stress-free. From GST to legal drafting, everything was fast and professional.",
+      extraText: "The dashboard they provided helped track finances easily and avoid mistakes.",
+      image: "https://www.shutterstock.com/image-photo/happy-young-professional-latin-business-260nw-2438190417.jpg",
+      rating: 4,
     },
     {
       name: "Kanika",
       role: "Finance Director",
-      text:
-        "Virtual CFO support helped us make smarter decisions and improve profitability significantly.",
+      text: "Virtual CFO support helped us make smarter decisions and improve profitability significantly.",
+      extraText: "They suggested cost-cutting and investment strategies that doubled efficiency.",
+      image: "https://photos.peopleimages.com/picture/202302/2628087-happy-smile-and-portrait-of-indian-woman-at-desk-for-management-planning-and-data.-research-innovation-and-vision-with-face-of-employee-in-office-for-information-website-and-professional--fit_400_400.jpg",
+      rating: 5,
     },
     {
       name: "Rahul Verma",
       role: "CEO",
-      text:
-        "Professional, reliable, and highly knowledgeable. Their financial advisory helped us scale confidently.",
+      text: "Professional, reliable, and highly knowledgeable. Their financial advisory helped us scale confidently.",
+      extraText: "We achieved a 30% increase in quarterly profits with their guidance.",
+      image: "https://t3.ftcdn.net/jpg/05/17/96/20/360_F_517962042_PssY3rZpOEpC9LN0kiF3t5m3vdn18LXd.jpg",
+      rating: 5,
     },
   ];
 
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
-
     <section className="voice-premium-section">
-
       <div className="voice-container">
-
         <div className="voice-header">
-
-          
-
-          <h2 className="voice-title">
-            What Our Clients Say
-          </h2>
-
-          <p className="voice-subtitle">
-            Trusted by businesses worldwide for financial excellence
-          </p>
-
+          <h2 className="voice-title">What Our Clients Say</h2>
+          <p className="voice-subtitle">Trusted by businesses worldwide for financial excellence</p>
         </div>
 
-        <div className="voice-grid">
-
-          {cards.map((card, index) => (
-            <CustomCard
-              key={index}
-              name={card.name}
-              role={card.role}
-              text={card.text}
-              index={index}
-            />
-          ))}
-
+        <div className="voice-carousel-wrapper">
+          <div className="voice-carousel-track">
+            {cards.concat(cards).map((card, index) => (
+              <div
+                key={index}
+                className="voice-card-wrapper"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <CustomCard {...card} showExtra={hoveredIndex === index} />
+              </div>
+            ))}
+          </div>
         </div>
-
       </div>
-
     </section>
-
   );
-
 };
 
 export default Voice;

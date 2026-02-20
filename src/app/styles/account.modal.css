@@ -1,145 +1,5 @@
 /* 
 
-.account-section {
-  padding: 80px 6%;
-  font-family: 'Poppins', sans-serif;
-  color: #1f2937;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #f9fafb 0%, #eef2ff 50%, #f1f5f9 100%);
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-}
-
-.account-section::before,
-.account-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px); 
-  z-index: 0;
-  pointer-events: none;
-  will-change: transform, opacity;
-}
-
-.account-section::before {
-  width: 280px;
-  height: 280px;
-  background: rgba(37, 99, 235, 0.25);
-  top: -100px;
-  left: -100px;
-}
-
-.account-section::after {
-  width: 280px;
-  height: 280px;
-  background: rgba(99, 102, 241, 0.25);
-  bottom: -100px;
-  right: -100px;
-}
-
-.account-header,
-.account-challenge {
-  position: relative;
-  z-index: 1;
-}
-
-.account-header h1 {
-  font-size: 1.8rem;
-  color: #023E60;
-  font-weight: 600;
-  margin-bottom: 20px;
-  will-change: transform;
-}
-
-.account-header p {
-  font-size: 1.05rem;
-  color: #475569;
-  line-height: 1.8;
-  font-weight: 400;
-}
-
-.account-challenge {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.challenge-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.challenge-text h2 {
-  font-size: 1.7rem;
-  color: #2563eb;
-  margin-bottom: 18px;
-  font-weight: 600;
-  will-change: transform;
-}
-
-.challenge-text p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: #475569;
-  font-weight: 400;
-}
-
-.challenge-image {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.challenge-image::before {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 70%);
-  border-radius: 50%;
-  z-index: 0;
-  animation: pulseGlow 8s ease-in-out infinite;
-  will-change: transform, opacity;
-  transform: translateZ(0);
-}
-
-.challenge-image img {
-  width: 100%;
-  max-height: 340px;
-  border-radius: 20px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 1;
-  object-fit: cover;
-  animation: floatImage 6s ease-in-out infinite;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  will-change: transform;
-  transform: translateZ(0); 
-}
-
-.challenge-image img:hover {
-  transform: scale(1.06) rotate(2deg);
-  box-shadow: 0 30px 70px rgba(37, 99, 235, 0.3);
-}
-
-@keyframes pulseGlow {
-  0%   { transform: scale(1) translateZ(0); opacity: 0.6; }
-  50%  { transform: scale(1.15) translateZ(0); opacity: 0.35; }
-  100% { transform: scale(1) translateZ(0); opacity: 0.6; }
-}
-
-@keyframes floatImage {
-  0%   { transform: translateY(0px) translateZ(0); }
-  50%  { transform: translateY(-12px) translateZ(0); }
-  100% { transform: translateY(0px) translateZ(0); }
-} */
-
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
@@ -147,10 +7,6 @@ body{
   font-family:'Poppins',sans-serif;
 }
 
-
-/* ===============================
-SECTION BACKGROUND
-=============================== */
 
 .account-section-premium{
 
@@ -164,8 +20,6 @@ SECTION BACKGROUND
   overflow:hidden;
 }
 
-
-/* background decorative shape */
 
 .account-section-premium::before{
 
@@ -189,9 +43,6 @@ SECTION BACKGROUND
 
 
 
-/* ===============================
-MAIN CARD
-=============================== */
 
 .account-card-premium{
 
@@ -222,10 +73,6 @@ MAIN CARD
 
 
 
-/* ===============================
-BADGE
-=============================== */
-
 .account-badge{
 
   background:#e0e7ff;
@@ -247,10 +94,6 @@ BADGE
 
 
 
-/* ===============================
-HEADING
-=============================== */
-
 .account-heading{
 
   font-size:42px;
@@ -264,11 +107,6 @@ HEADING
   line-height:1.3;
 }
 
-
-
-/* ===============================
-TEXT
-=============================== */
 
 .account-text{
 
@@ -285,9 +123,6 @@ TEXT
 
 
 
-/* ===============================
-FEATURE LIST
-=============================== */
 
 .account-features{
 
@@ -330,10 +165,6 @@ FEATURE LIST
 
 
 
-/* ===============================
-IMAGE
-=============================== */
-
 .account-image-box{
 
   text-align:center;
@@ -357,8 +188,6 @@ IMAGE
   z-index:0;
 }
 
-
-/* floating card */
 
 .account-image-box::after{
 
@@ -386,10 +215,6 @@ IMAGE
 }
 
 
-
-/* ===============================
-RESPONSIVE
-=============================== */
 
 @media(max-width:991px){
 
@@ -419,4 +244,154 @@ margin-top:30px;
 
 }
 
+} */
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* SECTION */
+.account-section-premium {
+  padding: 60px 0;
+  background: linear-gradient(135deg,#f8fbff 0%,#eef4ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Circle */
+.account-section-premium::before {
+  content:"";
+  position:absolute;
+  right:-200px;
+  top:-200px;
+  width:500px;
+  height:500px;
+  background:linear-gradient(135deg,#4f46e5,#06b6d4);
+  border-radius:50%;
+  opacity:.06;
+}
+
+/* ------------------- */
+/* ANIMATIONS START */
+/* ------------------- */
+
+/* Slide from Left */
+@keyframes slideFromLeft {
+  0% { opacity:0; transform: translateX(-80px); }
+  100% { opacity:1; transform: translateX(0); }
+}
+
+/* Slide from Right */
+@keyframes slideFromRight {
+  0% { opacity:0; transform: translateX(80px); }
+  100% { opacity:1; transform: translateX(0); }
+}
+
+/* Fade Up */
+@keyframes fadeUp {
+  0% { opacity:0; transform: translateY(20px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+
+/* LEFT CONTENT ANIMATION */
+.account-left .account-heading {
+  animation: slideFromLeft 1s forwards;
+}
+.account-left .account-text {
+  animation: slideFromLeft 1s forwards 0.3s;
+}
+
+/* Features staggered animation */
+.account-feature-item:nth-child(1) { animation: fadeUp 0.6s forwards 0.6s; }
+.account-feature-item:nth-child(2) { animation: fadeUp 0.6s forwards 0.8s; }
+.account-feature-item:nth-child(3) { animation: fadeUp 0.6s forwards 1s; }
+.account-feature-item:nth-child(4) { animation: fadeUp 0.6s forwards 1.2s; }
+
+/* RIGHT CONTENT ANIMATION */
+.account-right .account-image-box {
+  animation: slideFromRight 1s forwards 0.5s;
+}
+
+/* ------------------- */
+/* FEATURES */
+.account-features {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.account-feature-item {
+  background:white;
+  padding:14px 18px;
+  border-radius:12px;
+  font-weight:500;
+  font-size:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+  opacity:0; /* will animate via fadeUp */
+  transition:.3s;
+}
+
+.account-feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.08);
+  color:#4f46e5;
+}
+
+/* IMAGE */
+.account-image-box {
+  text-align:center;
+  position:relative;
+  opacity:0; /* animated by slideFromRight */
+}
+
+.account-image-premium {
+  width:420px;
+  height:400px;
+  border-radius:18px;
+  box-shadow: 0 30px 70px rgba(0,0,0,.18);
+  position:relative;
+  z-index:0;
+}
+
+.account-image-box::after {
+  content:"Trusted CFO Experts";
+  position:absolute;
+  bottom:-20px;
+  left:30px;
+  background:white;
+  padding:12px 20px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:600;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+/* ------------------- */
+/* HEADING & TEXT */
+.account-heading {
+  font-size:42px;
+  font-weight:700;
+  color:#0f172a;
+  margin-bottom:20px;
+  line-height:1.3;
+}
+
+.account-text {
+  font-size:17px;
+  color:#475569;
+  line-height:1.7;
+  margin-bottom:30px;
+  max-width:520px;
+}
+
+/* ------------------- */
+/* RESPONSIVE */
+@media(max-width:991px){
+  .account-heading{ font-size:28px; }
+  .account-features{ grid-template-columns:1fr; }
+  .account-image-premium{ width:100%; height:auto; margin-top:30px; }
 }

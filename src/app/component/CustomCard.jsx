@@ -1,68 +1,38 @@
 
-"use client";
 
-import React, { useEffect, useRef, useState } from "react";
+'use client';
 
-const CustomCard = ({ name, role, text, index }) => {
+import React from "react";
 
-  const ref = useRef();
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-  }, []);
-
+const CustomCard = ({ name, role, text, extraText, image, rating, showExtra }) => {
   return (
+    <div className="voice-card">
+      <div className="voice-quote">"</div>
 
-    <div
-      ref={ref}
-      className={`voice-card ${visible ? "voice-card-visible" : ""}`}
-      style={{ animationDelay: `${index * 0.15}s` }}
-    >
+      <p className="voice-text">{text}</p>
 
-      <div className="voice-quote">
-        "
+      {showExtra && (
+        <div className="voice-overlay">
+          {image && <img src={image} alt={name} className="voice-extra-image" />}
+          <p className="voice-extra-text">{extraText}</p>
+        </div>
+      )}
+
+      <div className="voice-rating">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <span key={i} className={`star ${i < rating ? "filled" : ""}`}>&#9733;</span>
+        ))}
       </div>
-
-      <p className="voice-text">
-        {text}
-      </p>
 
       <div className="voice-user">
-
-        <div className="voice-avatar">
-          {name.charAt(0)}
-        </div>
-
+        <div className="voice-avatar">{name.charAt(0)}</div>
         <div>
-
-          <div className="voice-name">
-            {name}
-          </div>
-
-          <div className="voice-role">
-            {role}
-          </div>
-
+          <div className="voice-name">{name}</div>
+          <div className="voice-role">{role}</div>
         </div>
-
       </div>
-
     </div>
-
   );
-
 };
 
 export default CustomCard;

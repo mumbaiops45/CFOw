@@ -1,115 +1,70 @@
-// import React from "react";
-// import "../styles/main.modal.css";
-// import { FaPhoneAlt } from "react-icons/fa";
 
-// const Main = () => {
-//   return (
-//     <div className="bdystl">
-//       <section className="hero-section">
-//         <div className="lines-bgg"></div>
-//         <div className="container">
-//           <div className="d-flex flex-lg-row flex-column align-items-center hero-flex">
-//             <div className="hero-content text-center text-lg-start mb-4 mb-lg-0">
-//               <h1 className="display-5 fw-bold hero-title">
-//                 <span className="txt-typing">Empowering Businesses with Strategic Financial Leadership</span>
-//               </h1>
-//               <p className="hero-text mt-3">
-//                 At Radiant Services Company, we empower businesses to thrive
-//                 with expert financial and legal solutions. Our team of seasoned
-//                 Chartered Accountants and consultants provides end-to-end support,
-//                 including income tax and GST filings, legal drafting, strategic planning,
-//                 and statutory compliance.
-//               </p>
+"use client";
 
-//               <a href="tel:+918454816913" className="btn mt-4 hero-btn">
-//                 <FaPhoneAlt /> Learn More About Us </a>
-//             </div>
-
-//             <div className="hero-image-wrapper">
-//               <img
-//                 src="cfohero.png"
-//                 alt="Business & Finance"
-//                 className="hero-image"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//     </div>
-//   );
-// };
-
-// export default Main;
-
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/main.modal.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
+const financeBgImages = [
+  "/partner.jpg",
+  "/partner1.jpg",
+  "/blockchain.png",
+];
+
 const Main = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const slider = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % financeBgImages.length);
+    }, 5000);
+
+    return () => clearInterval(slider);
+  }, []);
+
   return (
-    <div className="bdystl">
+    <section
+      className="sfh-section"
+      style={{ backgroundImage: `url(${financeBgImages[activeIndex]})` }}
+    >
+      <div className="sfh-overlay"></div>
 
-      {/* HERO SECTION */}
-      <section className="hero-section">
+      <div className="sfh-container">
+        <div className="sfh-grid">
 
-        <div className="hero-overlay"></div>
+          <div className="sfh-content">
+            <h1 className="sfh-heading">
+              Elite Virtual CFO & Financial Advisory for Ambitious Businesses
+            </h1>
 
-        <div className="container">
+            <p className="sfh-description">
+              Radiant Services Company partners with founders, startups,
+              and enterprises to deliver strategic financial clarity,
+              regulatory excellence, and scalable growth frameworks.
+              From Virtual CFO leadership to GST, taxation, compliance,
+              and performance optimization — we drive measurable financial
+              transformation.
+            </p>
 
-          <div className="hero-flex">
-
-            {/* LEFT CONTENT */}
-            <div className="hero-content">
-
-              {/* <div className="hero-badge">
-                Trusted Virtual CFO & Chartered Accountant Firm in India
-              </div> */}
-
-              <h1 className="hero-title">
-                Empowering Businesses with Strategic Financial Leadership
-              </h1>
-
-              <p className="hero-text">
-                At Radiant Services Company, we empower businesses to thrive
-                with expert financial and legal solutions. Our Chartered
-                Accountants and CFO consultants provide GST, income tax,
-                compliance, and strategic financial leadership to help you grow
-                confidently.
-              </p>
-
-              <div className="hero-buttons">
-
-                <a href="tel:+918454816913" className="hero-btn-primary">
-                  <FaPhoneAlt /> Book Free Consultation
-                </a>
-
-                {/* <a href="#services" className="hero-btn-secondary">
-                  Explore Services
-                </a> */}
-              </div>
-            </div>
-
-
-           
-            <div className="hero-image-wrapper">
-
-              <img
-                src="/cfohero.png"
-                alt="Virtual CFO Services"
-                className="hero-image"
-              />
-
+            <div className="sfh-actions">
+              <a href="tel:+918454816913" className="sfh-primary-btn">
+                <FaPhoneAlt /> Schedule Strategic Consultation
+              </a>
             </div>
 
           </div>
 
+          {/* <div className="sfh-visual">
+            <img
+              src="/cfohero.png"
+              alt="Strategic CFO Advisory"
+              className="sfh-image"
+            />
+          </div> */}
+
         </div>
-
-      </section>
-
-    </div>
+      </div>
+    </section>
   );
 };
 
