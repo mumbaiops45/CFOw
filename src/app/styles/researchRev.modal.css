@@ -1,4 +1,4 @@
-
+/* 
 
 .research-container {
   display: flex;
@@ -113,4 +113,265 @@
   .research-content p {
     font-size: 0.95rem;
   }
+} */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.research-section-premium {
+
+  padding: 50px 6%;
+
+  background:
+  linear-gradient(135deg,#f8fbff 0%,#eef4ff 100%);
+
+  position: relative;
+
+  overflow: hidden;
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* background gradient shape */
+
+.research-section-premium::before {
+
+  content:"";
+
+  position:absolute;
+
+  left:-200px;
+  bottom:-200px;
+
+  width:500px;
+  height:500px;
+
+  background:linear-gradient(135deg,#4f46e5,#06b6d4);
+
+  border-radius:50%;
+
+  opacity:.06;
+
+}
+
+
+/* main card */
+
+.research-card-premium {
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:60px;
+
+  background:rgba(255,255,255,0.7);
+
+  backdrop-filter: blur(12px);
+
+  padding:60px;
+
+  border-radius:20px;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.08);
+
+  border:1px solid rgba(255,255,255,.4);
+
+  transition:.4s;
+
+}
+
+
+.research-card-premium:hover {
+
+  transform:translateY(-6px);
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,.12);
+
+}
+
+
+/* content animation */
+
+.research-content-premium {
+
+  flex:1;
+
+  opacity:0;
+
+  transform:translateY(40px);
+
+  transition:all .8s ease;
+
+}
+
+
+.research-content-premium.active {
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+
+/* badge */
+
+.research-badge {
+
+  background:#e0e7ff;
+
+  color:#4f46e5;
+
+  padding:8px 18px;
+
+  border-radius:30px;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  display:inline-block;
+
+  margin-bottom:18px;
+
+}
+
+
+/* heading */
+
+.research-heading {
+
+  font-size:42px;
+
+  font-weight:700;
+
+  color:#0f172a;
+
+  line-height:1.3;
+
+  margin-bottom:20px;
+
+}
+
+
+/* text */
+
+.research-text {
+
+  font-size:17px;
+
+  color:#475569;
+
+  line-height:1.7;
+
+  margin-bottom:18px;
+
+  max-width:520px;
+
+}
+
+
+/* image animation */
+
+.research-image-premium {
+
+  flex:1;
+
+  text-align:center;
+
+  position:relative;
+
+  opacity:0;
+
+  transform:translateX(60px);
+
+  transition:all .8s ease;
+
+}
+
+
+.research-image-premium.active {
+
+  opacity:1;
+
+  transform:translateX(0);
+
+}
+
+
+/* image */
+
+.research-image-premium img {
+
+  width:420px;
+
+  border-radius:18px;
+
+  box-shadow:
+  0 30px 70px rgba(0,0,0,.18);
+
+}
+
+
+/* floating trust card */
+
+.research-image-premium::after {
+
+  content:"Innovation Driven";
+
+  position:absolute;
+
+  bottom:-18px;
+
+  left:40px;
+
+  background:white;
+
+  padding:12px 20px;
+
+  border-radius:12px;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+/* responsive */
+
+@media(max-width:991px){
+
+.research-card-premium {
+
+flex-direction:column;
+
+padding:35px;
+
+}
+
+.research-heading {
+
+font-size:28px;
+
+}
+
+.research-image-premium img {
+
+width:100%;
+
+margin-top:30px;
+
+}
+
 }

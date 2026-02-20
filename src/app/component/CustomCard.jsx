@@ -2,54 +2,67 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import "../styles/customcard.modal.css";
 
-const CustomCard = ({ title, name, text, index }) => {
-  const cardRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-const [hasAnimated, setHasAnimated] = useState(false);
-  
+const CustomCard = ({ name, role, text, index }) => {
+
+  const ref = useRef();
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-  if (hasAnimated) return;
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        setHasAnimated(true);
-        observer.disconnect();
-      }
-    },
-    { threshold: 0.2 }
-  );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
 
-  if (cardRef.current) observer.observe(cardRef.current);
+    if (ref.current) observer.observe(ref.current);
 
-  return () => observer.disconnect();
-}, [hasAnimated]);
-
-
-  const animationClass =
-    index % 2 === 0 ? "slide-in-left" : "slide-in-right";
+  }, []);
 
   return (
+
     <div
-      ref={cardRef}
-      className={`card ${
-        isVisible ? `animated-card ${animationClass}` : "card-hidden"
-      }`}
+      ref={ref}
+      className={`voice-card ${visible ? "voice-card-visible" : ""}`}
+      style={{ animationDelay: `${index * 0.15}s` }}
     >
-      <div className="card-body">
-        {title && <h5 className="card-title">{title}</h5>}
-        <p className="card-text">{text}</p>
-        {name && (
-          <h6 className="card-subtitle ">{name}</h6>
-        )}
+
+      <div className="voice-quote">
+        "
       </div>
+
+      <p className="voice-text">
+        {text}
+      </p>
+
+      <div className="voice-user">
+
+        <div className="voice-avatar">
+          {name.charAt(0)}
+        </div>
+
+        <div>
+
+          <div className="voice-name">
+            {name}
+          </div>
+
+          <div className="voice-role">
+            {role}
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   );
+
 };
 
 export default CustomCard;
-
